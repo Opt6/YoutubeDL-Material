@@ -209,7 +209,7 @@ async function collectInfo(download_uid) {
 
     if (download['user_uid'] && !options.customFileFolderPath) {
         let usersFileFolder = config_api.getConfigItem('ytdl_users_base_path');
-        const user_path = path.join(usersFileFolder, download['user_uid'], type);
+        const user_path = path.join(usersFileFolder, download['user_uid']);
         options.customFileFolderPath = user_path + path.sep;
     }
 
